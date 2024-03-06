@@ -16,7 +16,7 @@ const ImageGenerator = () => {
     const generateImage = async () => {
         try {
             const apiKey = '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'; // Replace with your actual API key
-            const openai = new OpenAI({ apiKey });
+            const openai = new OpenAI({ apiKey,dangerouslyAllowBrowser: true});
             const response = await openai.images.generate({ 
                     model: "dall-e-3",
                     prompt: query,
