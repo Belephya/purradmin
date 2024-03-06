@@ -14,7 +14,7 @@ const ImageGenerator = () => {
     // Function to call the DALL-E API
     const generateImage = async () => {
       try {
-        const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+        const apiKey = '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'; // Replace with your actual API key
         const openai = new OpenAIApi(new Configuration({ apiKey }));
         const response = await openai.createImage({ prompt: query });
         setGeneratedImage(response.data.url); // Assuming the API response includes an image URL
