@@ -19,6 +19,11 @@ export default function TodoList() {
 
   useEffect(() => {
     listTodos();
+    const sub = client.models.Todo.observeQuery().subscribe(({ items }) =>
+        setTodos([...items])
+     );
+
+    return () => sub.unsubscribe();
   }, []);
 
   return (
