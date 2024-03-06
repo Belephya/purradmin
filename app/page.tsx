@@ -3,14 +3,14 @@
 
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
-import TodoList from "@/components/TodoList";
+import Imagine from "@/components/Imagine";
 
 
 function App() {
   return (
     <>
       <h1>Hello, Amplify 👋</h1>
-      <TodoList />
+      <Imagine />
     </>
   );
 }
